@@ -1,4 +1,6 @@
-﻿function Header(){
+﻿import './Header.css'
+
+function Header(){
     return(
         <div className="cab_header_center">
             <div className="title_text_block">

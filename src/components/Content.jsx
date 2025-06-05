@@ -1,5 +1,4 @@
-﻿import App from "../App";
-import Header from "./Header";
+﻿import './Content.css'
 
 function Content() {
     return (

@@ -12,7 +12,7 @@ import CertificateHistory from './components/CertificateHistory';
 function App() {
 
   return (
-      <div>
+      <div className="container">
         <Header />
         <Content />
         <CertificateHistory />
