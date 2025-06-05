@@ -96,7 +96,6 @@
 .img.default-img img {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
 }
 
 .exit_block {
@@ -129,4 +128,33 @@
 .button.oper_button.active {
   background-color: white;
   color: #5b76a0;
+}
+
+.img.default-img {
+  position: relative;
+  width: 36px;
+  height: 36px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(-33%, -33%);
+    z-index: 1;
+
+  }
 }
