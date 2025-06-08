@@ -1,22 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 
-import Content from './components/Content';
+import MainPage from './components/MainPage';
 
-import CertificateHistory from './components/CertificateHistory';
+import RegistrarPage from './components/RegistrarPage';
 
 
 
 function App() {
 
   return (
-      <div className="container">
-        <Header />
-        <Content />
-        <CertificateHistory />
-      </div>
+      <Router>
+          <div className="container">
+              <Header />
+              <Routes>
+                  <Route path="/" element={<MainPage />} />
+                  <Route path="/registrar" element={<RegistrarPage />} />
+              </Routes>
+          </div>
+      </Router>
   );
 
 }

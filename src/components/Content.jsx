@@ -22,7 +22,11 @@ function Content() {
             <textarea placeholder="Учреждение" name="institution" rows={3}></textarea>
 
             <button type="submit" className="submit-button">Отправить справку</button>
+
+            
         </div>
+
+
     );
 }
 
