@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useState } from 'react';
-import './RegistrarPage.css';
+import '../css/RegistrarPage.css';
 
 const RegistrarPage = () => {
     const [certificates, setCertificates] = useState([]);

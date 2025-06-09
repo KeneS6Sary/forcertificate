@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 
-import MainPage from './components/MainPage';
+import MainPage from './pages/MainPage';
 
-import RegistrarPage from './components/RegistrarPage';
+import RegistrarPage from './pages/RegistrarPage';
 
 
 

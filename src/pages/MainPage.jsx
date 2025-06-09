@@ -1,7 +1,7 @@
 ﻿// src/components/MainPage.jsx
 import React from 'react';
-import Content from './Content';
-import CertificateHistory from './CertificateHistory';
+import Content from '../components/Content';
+import CertificateHistory from '../components/CertificateHistory';
 
 const MainPage = () => {
     return (

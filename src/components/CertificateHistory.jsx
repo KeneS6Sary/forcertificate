@@ -1,4 +1,4 @@
-﻿import './CertificateHistory.css'
+﻿import '../css/CertificateHistory.css'
 function CertificateHistory() {
     return (<>
         <h3>История справок</h3>
