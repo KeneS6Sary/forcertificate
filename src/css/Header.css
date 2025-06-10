@@ -32,8 +32,8 @@
 .menu_button {
     background-color: white;
     color: #333;
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 10px 14px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -41,8 +41,9 @@
     gap: 6px;
 }
 
-.menu_button p {
-    margin: 0;
+.menu_button svg {
+    width: 18px;
+    height: 18px;
 }
 
 .icon-home,
@@ -65,8 +66,8 @@
 .visually_impaired .bvi-open {
     color: white;
     border: 1px solid white;
-    padding: 6px 10px;
-    border-radius: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
     text-decoration: none;
     display: flex;
     align-items: center;

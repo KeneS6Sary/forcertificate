@@ -17,6 +17,12 @@
     color: #333;
 }
 
+.certificate-history {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .reference-history th {
     background-color: #566f9e;
     color: white;

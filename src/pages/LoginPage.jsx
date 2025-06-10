@@ -1,33 +1,45 @@
 ﻿import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import '../css/LoginPage.css';
 
 const LoginPage = () => {
-    const [email, setEmail] = useState('');
+    const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();
 
-    const handleLogin = async () => {
-        const response = await fetch('/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            localStorage.setItem('token', data.token);
-            navigate('/registrar');
-        } else {
-            alert('Неверный логин или пароль');
-        }
+    const handleLogin = (e) => {
+        e.preventDefault();
+        alert(`Логин: ${login}@satbayev.university\nПароль: ${password}`);
+        // здесь будет вызов API
     };
 
     return (
-        <div className="login-page">
-            <h2>Вход</h2>
-            <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-            <input type="password" placeholder="Пароль" onChange={e => setPassword(e.target.value)} />
-            <button onClick={handleLogin}>Войти</button>
+        <div className="login-wrapper">
+            <div className="login-box">
+                <img src="/assets/satbayev-logo.png" alt="Satbayev University" className="logo" />
+
+                <h2 className="title">Учебная система</h2>
+                <form className="login-form" onSubmit={handleLogin}>
+                    <div className="input-group">
+                        <input
+                            type="text"
+                            placeholder="Логин"
+                            value={login}
+                            onChange={e => setLogin(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="input-group">
+                        <input
+                            type="password"
+                            placeholder="Пароль"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="login-btn">ВОЙТИ</button>
+                </form>
+                <div className="forgot">Изменить пароль</div>
+            </div>
         </div>
     );
 };

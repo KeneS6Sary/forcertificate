@@ -1,7 +1,7 @@
 ﻿import '../css/CertificateHistory.css'
 function CertificateHistory() {
     return (<>
-        <h3>История справок</h3>
+        <h3 className="certificate-history">История справок</h3>
     <table className="reference-history">
         <thead>
         <tr>

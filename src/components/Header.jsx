@@ -9,41 +9,18 @@ function Header(){
                     <div className="top_text">
 
 
-                        <div className="menu" ng-if="$ctrl.crumbType == $ctrl.crumbTypeEnums.Button">
+                        <div className="menu">
                             <a href="//sso.satbayev.university" className="menu_link">
                                 <div className="menu_button">
-                                    <i className="icon-home"></i>
+                                    <img src="/assets/home.png" alt="Домой" width="18" height="18" />
                                 </div>
                             </a>
-
-                            <div className="menu_button" ng-repeat="crumb in $ctrl.breadCrumbs"
-                                 ng-click="$ctrl.goTo(crumb)">
-
-                                <i className=" orders_menu"></i>
-                                <p ng-if="$ctrl.breadCrumbs.length < 3 || $last">Страница студента</p>
-                                <div className="next_button">
-                                    <i className="icon-breadcrumbs_arrow"> </i>
-                                </div>
-                            </div>
-
-                            <div className="menu_button" ng-repeat="crumb in $ctrl.breadCrumbs"
-                                 ng-click="$ctrl.goTo(crumb)">
-
-                                <i className=" orders_menu"></i>
-                                <p ng-if="$ctrl.breadCrumbs.length < 3 || $last">Справки</p>
-                                <div className="next_button">
-                                    <i className="icon-breadcrumbs_arrow"> </i>
-                                </div>
-                            </div>
-
                         </div>
 
+
+
                     </div>
-
-
                 </div>
-
-
             </div>
             <div className="operator_block">
                 <div className="visually_impaired">
@@ -59,8 +36,8 @@ function Header(){
 
                     <div className="img default-img" ng-if="$ctrl.imageSrc &amp;&amp; $ctrl.showImage"
                          ng-class="{'default-img': !$ctrl.hasImage}">
-                        <img ng-src="//stud.satbayev.university/images/icons/new-icons/default-avatar.png"
-                             src="//stud.satbayev.university/images/icons/new-icons/default-avatar.png"
+                        <img ng-src="/assets/default-avatar.png"
+                             src="/assets/default-avatar.png"
                              alt="Аватар"
                              className="bvi-img"/>
 
